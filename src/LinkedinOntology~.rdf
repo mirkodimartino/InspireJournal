@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#"
+     xml:base="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#glossary -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#glossary"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#atInstitution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#atInstitution">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CVItem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#Institution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#atTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#atTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CVItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#degreeTitle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#degreeTitle">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#DegreeTitle"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#EducationItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#fromSchool -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#fromSchool">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#EducationItem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasCVItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasCVItem">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CVItem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/untitled-ontology-2#Member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasCertification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasCertification">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CertificationItem"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasCVItem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/untitled-ontology-2#Member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasEducation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasEducation">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#EducationItem"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasCVItem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/untitled-ontology-2#Member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasExperience -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasExperience">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#ExperienceItem"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasCVItem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/untitled-ontology-2#Member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasHonor/Award -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasHonor/Award">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#HonorOrAwardItem"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasCVItem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/untitled-ontology-2#Member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasSkill">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#Skill"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/untitled-ontology-2#Member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#inSpace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#inSpace">
+        <rdfs:comment>will have range on Geo ontology</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CVItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#ofField -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#ofField">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#EducationItem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#FieldOfStudy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#partecipated_in_project -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#partecipated_in_project">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#ProjectItem"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#hasCVItem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/untitled-ontology-2#Member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#withRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#withRole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#ExperienceItem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#DegreeGrade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#DegreeGrade">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#EducationItem"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#memberSubtitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#memberSubtitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/untitled-ontology-2#Member"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#summary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#summary">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/untitled-ontology-2#Member"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CVItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CVItem">
+        <glossary>A CVitem is an item representing an event of the member&apos;s (Class) curriculum vitae. Each CVItem has the Institution (Class) which is where the event has taken place, and an Interval (Class) representing the time interval of the event. </glossary>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CertificationItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CertificationItem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CVItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#Degree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#Degree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#EducationItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#DegreeTitle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#DegreeTitle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#EducationItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#EducationItem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CVItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#ExperienceItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#ExperienceItem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CVItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#FieldOfStudy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#FieldOfStudy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#GeoLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#GeoLocation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#HonorOrAwardItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#HonorOrAwardItem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CVItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#Institution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#Institution"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#MOOC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#MOOC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CertificationItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#ProfessionalCourse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#ProfessionalCourse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CertificationItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#ProjectItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#ProjectItem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#CVItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#Role"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#School -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#School"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#SelfStudy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#SelfStudy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#EducationItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#Skill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/LinkedIn#Skill">
+        <glossary>A particular ability of a LinkedIn Member (Class). </glossary>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mirko/ontologies/2016/1/untitled-ontology-2#Member -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mirko/ontologies/2016/1/untitled-ontology-2#Member">
+        <glossary>A LinkedIn member. Each member has a memberSubtitle (DataProperty), a Summary (DataProperty), and a set of CVItems (Class) and Skills (Class). These elements describe the member&apos;s Curriculum Vitae.</glossary>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
